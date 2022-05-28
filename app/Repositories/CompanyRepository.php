@@ -2,9 +2,10 @@
 
 namespace App\Repositories;
 
+use App\Models\Company;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
-use App\Models\Company;
+use Tracket\Core\Exceptions\ModelNotFoundException;
 
 class CompanyRepository
 {
@@ -25,7 +26,7 @@ class CompanyRepository
             ->first();
 
         if (!$company) {
-            throw new CompanyNotFoundException($externalId);
+            throw new ModelNotFoundException(Company::class, 'external ID', $externalId);
         }
 
         return $company;

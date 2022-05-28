@@ -2,8 +2,9 @@
 
 namespace App\Repositories;
 
-use Illuminate\Database\Eloquent\Builder;
 use App\Models\Role;
+use Illuminate\Database\Eloquent\Builder;
+use Tracket\Core\Exceptions\ModelNotFoundException;
 
 class RoleRepository
 {
@@ -19,7 +20,7 @@ class RoleRepository
             ->first();
 
         if (!$role) {
-            throw new RoleNotFoundException($name);
+            throw new ModelNotFoundException(Role::class, 'name', $name);
         }
 
         return $role;

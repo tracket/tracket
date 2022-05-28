@@ -5,6 +5,7 @@ namespace App\Repositories;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use App\Models\Page;
+use Tracket\Core\Exceptions\ModelNotFoundException;
 
 class PageRepository
 {
@@ -25,7 +26,7 @@ class PageRepository
             ->first();
 
         if (!$page) {
-            throw new PageNotFoundException($externalId);
+            throw new ModelNotFoundException(Page::class, 'external ID', $externalId);
         }
 
         return $page;
@@ -38,7 +39,7 @@ class PageRepository
             ->first();
 
         if (!$page) {
-            throw new PageNotFoundException($slug, 'slug');
+            throw new ModelNotFoundException(Page::class, 'slug', $slug);
         }
 
         return $page;

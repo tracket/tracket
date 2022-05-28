@@ -5011,16 +5011,16 @@
         },
         {
             "name": "tracket/framework",
-            "version": "0.3.1",
+            "version": "0.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tracket/framework.git",
-                "reference": "52f100f5c92d998db08d9e6d53a95111ca5e0d3e"
+                "reference": "2f60e22f8921a383a5568630c64da85637ed39e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tracket/framework/zipball/52f100f5c92d998db08d9e6d53a95111ca5e0d3e",
-                "reference": "52f100f5c92d998db08d9e6d53a95111ca5e0d3e",
+                "url": "https://api.github.com/repos/tracket/framework/zipball/2f60e22f8921a383a5568630c64da85637ed39e4",
+                "reference": "2f60e22f8921a383a5568630c64da85637ed39e4",
                 "shasum": ""
             },
             "require": {
@@ -5072,9 +5072,9 @@
             "description": "The Tracket Framework",
             "support": {
                 "issues": "https://github.com/tracket/framework/issues",
-                "source": "https://github.com/tracket/framework/tree/0.3.1"
+                "source": "https://github.com/tracket/framework/tree/0.3.4"
             },
-            "time": "2022-05-28T17:11:36+00:00"
+            "time": "2022-05-28T18:10:59+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

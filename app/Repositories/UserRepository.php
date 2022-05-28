@@ -2,8 +2,9 @@
 
 namespace App\Repositories;
 
-use Illuminate\Database\Eloquent\Builder;
 use App\Models\User;
+use Illuminate\Database\Eloquent\Builder;
+use Tracket\Core\Exceptions\ModelNotFoundException;
 
 class UserRepository
 {
@@ -19,7 +20,7 @@ class UserRepository
             ->first();
 
         if (!$user) {
-            throw new UserNotFoundException($id);
+            throw new ModelNotFoundException(User::class, 'id', $id);
         }
 
         return $user;

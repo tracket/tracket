@@ -5,6 +5,7 @@ namespace App\Repositories;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use App\Models\Job;
+use Tracket\Core\Exceptions\ModelNotFoundException;
 
 class JobRepository
 {
@@ -25,7 +26,7 @@ class JobRepository
             ->first();
 
         if (!$job) {
-            throw new JobNotFoundException($externalId);
+            throw new ModelNotFoundException(Job::class, 'external ID', $externalId);
         }
 
         return $job;

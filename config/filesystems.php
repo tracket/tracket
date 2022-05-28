@@ -71,6 +71,8 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('logos') => storage_path('app/public/logos'),
+        public_path('default') => base_path('themes/default/public'),
     ],
 
 ];
